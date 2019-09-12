@@ -1,16 +1,80 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap&subset=latin-ext');
 
 
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
+*,*:before,*:after {
   box-sizing: inherit;
 }
-
 body {
-  color: $yellow;
-  background: $violet;
+  color: $black;
+  background: $grey;
+  font-family: 'Kaushan Script', cursive;
 }
+main {
+  max-width: 1080px;
+  width: 100%;
+  margin: 32px auto;
+}
+.notepad{
+  &__box { 
+    background-image: url("../assets/img/zeszyt/notebook1.jpg");
+    background-clip: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__header {
+    margin-bottom: 15px;
+    text-align: end;
+    margin-right: 260px;
+  }
+  &__form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__textfield {
+    font-family: 'Times New Roman', Times, serif;
+    width: 560px;
+    height: 620px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__button1 {
+    width: 130px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 10px;
+    margin-right: 10px;
+    letter-spacing: 0.5px;
+    color: aliceblue;
+    background: #f2994a;
+  }
+  &__button2 {
+    width: 130px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 260px;
+    letter-spacing: 0.5px;
+    color: aliceblue;
+    background: #121232;
+  }
+  &__footer{
+    font-family: 'Times New Roman', Times, serif;
+    color: #0a64eb;
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+  }
+}
+
+
+
+
