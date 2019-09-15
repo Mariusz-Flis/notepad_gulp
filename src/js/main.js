@@ -1,22 +1,17 @@
-"use strict";
-
-// service worker registration - remove if you're not going to use it
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-
-// place your code below
-
-
 console.log(`Hello world!`);
 
 
+
+const notepadTextfield = document.querySelector('.notepad_textfield--js');
+const load = document.querySelector('.notepad__button1--load-js');
+const save = document.querySelector('.notepad__button2--save-js');
+
+save.addEventListener('click', (e) => {
+    e.preventDefault();
+    localStorage.setItem('notepadTextfield', notepadTextfield.value);
+})
+
+load.addEventListener('click', (e) => {
+    e.preventDefault();
+    notepadTextfield.value = localStorage.getItem('notepadTextfield');
+})

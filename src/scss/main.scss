@@ -1,23 +1,29 @@
 @import "_normalize";
 @import "_variables";
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap&subset=latin-ext");
 
-
-*,*:before,*:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 body {
+  width: 100 vw;
   color: $black;
   background: $grey;
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
 }
 main {
   max-width: 1080px;
   width: 100%;
   margin: 32px auto;
 }
-.notepad{
-  &__box { 
+.notepad {
+  margin: 32px auto;
+  &__box {
+    margin: 0 auto;
+    max-width: 1080px;
+    width: 100%;
     background-image: url("../assets/img/zeszyt/notebook1.jpg");
     background-clip: padding-box;
     background-position: center center;
@@ -29,7 +35,7 @@ main {
     text-align: end;
     margin-right: 260px;
   }
-  &__form{
+  &__form {
     position: relative;
     display: flex;
     align-items: center;
@@ -37,8 +43,8 @@ main {
     flex-direction: column;
   }
   &__textfield {
-    font-family: 'Times New Roman', Times, serif;
-    width:100%;
+    font-family: "Times New Roman", Times, serif;
+    width: 100%;
     min-width: 550px;
     min-height: 620px;
   }
@@ -53,8 +59,8 @@ main {
     padding: 10px;
     margin-right: 10px;
     letter-spacing: 0.5px;
-    color: aliceblue;
-    background: #f2994a;
+    color: $textWhite;
+    background: $saveOrange;
   }
   &__button2 {
     width: 130px;
@@ -64,18 +70,14 @@ main {
     margin-left: 10px;
     margin-right: 260px;
     letter-spacing: 0.5px;
-    color: aliceblue;
-    background: #121232;
+    color: $textWhite;
+    background: $loadViolet;
   }
-  &__footer{
-    font-family: 'Times New Roman', Times, serif;
-    color: #0a64eb;
+  &__footer {
+    font-family: "Times New Roman", Times, serif;
+    color: $blueFooter;
     text-decoration: none;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
   }
 }
-
-
-
-
