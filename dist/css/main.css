@@ -315,6 +315,7 @@ template {
           box-sizing: inherit; }
 
 body {
+  /*width: 100 vw;*/
   color: black;
   background: #e4dede;
   font-family: "Kaushan Script", cursive; }
